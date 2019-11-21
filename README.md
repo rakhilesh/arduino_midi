@@ -1,1 +1,2 @@
-# arduino_midi
+# Arduino based MIDI device
+
