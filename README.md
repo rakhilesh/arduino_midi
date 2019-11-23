@@ -14,10 +14,18 @@ While JD xi lacks any pedal inputs, the E-09 has sustain pedal inputs. Both keyb
 
 ## Hardware
 
-Compenents
-Arduino UNO
-Test position 
+### Components
+The following components were used for the prototype
+- Arduino UNO
+- Sparkfun MIDI shield
+- TRS 1/4" Female jack
+- Wires
 
+Sparkfun MIDI sheild comes with the required subcomponents like MIDI 5 pin Dins for MIDI IN and MIDI out, buttons and potentiometers. Potentiometers have been replaced with Nektar NX-P epression pedal.
+
+### Connections
+
+The following connections were used for the expression pedal.
 On Nektar NXp - Switch set to 1
 
 Pin 8 - Tip - 5 Volt
