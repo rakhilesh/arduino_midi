@@ -1,3 +1,4 @@
+
 /*
   Midi Expression and routing tool v1.0
 
@@ -12,6 +13,9 @@
   Hardware : Adding a 2 potentiometers to Cricuit
   
  */
+#include <Control_Surface.h>
+#include <MIDI.h>
+HardwareSerialMIDI_Interface midi={9600};
 
 #define BUTTON1  2
 #define BUTTON2  3
@@ -40,9 +44,28 @@ void setup() {
 
   Serial.begin(9600);
 
+  // Listen to all Chennels - While E09 can send through 4 by default when using split/dual other channels are used
+  // In ver 1 we intend to read from all Channels but only send to a specific channel as set using the buttons
+
+  MIDI.begin(MIDI_CHANNEL_OMNI); //THis also creates Soft thru
+
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  if(MIDI.read()) //Is there a midi message coming in
+  {
+    if(button(BUTTON1))
+    {
+      switch(MIDI.getData1())
+      {
+        case midi::
+          
+      }
+      
+    }
+  }
+  MIDI.
+  
 
 }
